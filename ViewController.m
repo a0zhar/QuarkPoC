@@ -16,14 +16,14 @@
     // Setup UI
     self.view.backgroundColor = [UIColor whiteColor];
     
-    // Setup UI log text view
+    // Setup log text view
     logTextView = [[UITextView alloc] initWithFrame:CGRectMake(20, 100, self.view.frame.size.width - 40, self.view.frame.size.height - 200)];
     logTextView.editable = NO;
     logTextView.font = [UIFont systemFontOfSize:14];
     logTextView.text = @"Exploit Log:\n";
     [self.view addSubview:logTextView];
     
-    // Setup UI button
+    // Setup exploit button
     exploitButton = [UIButton buttonWithType:UIButtonTypeSystem];
     exploitButton.frame = CGRectMake(20, 50, self.view.frame.size.width - 40, 40);
     [exploitButton setTitle:@"Run Exploit" forState:UIControlStateNormal];
@@ -39,7 +39,7 @@
 }
 
 - (void)runExploit {
-    [self appendLog:@"Starting Concrete Balerina..."];
+    [self appendLog:@"Starting exploit..."];
     
     // Get path to bundled input file
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"orientation-normal-fragmented" ofType:@"mp4.mov"];
